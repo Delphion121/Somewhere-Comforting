@@ -1,0 +1,155 @@
+:root {
+    --border-color: rgb(255, 255, 255, 0.1);
+    --nav-background: rgb(255, 255, 255);
+    --g1: rgb(55, 30, 114);
+    --g2: rgb(55, 30, 114);
+    --g3: rgb(55, 30, 114);
+  }
+body {
+      height: 100vh;
+      width: 100vh;
+      background-color: black;
+      margin: 0rem;
+      border: white;
+      overflow: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, a, p, span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+  }
+  
+  a:hover {
+    color: red;
+    transition: 1s;
+  }
+  
+  nav{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  nav > .nav-section{
+    padding:  1rem 3rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+     
+  }
+  
+  #nav-link-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  #nav-logo-secion, 
+  #nav-link-section {
+    flex-basis: calc(100 / 3);
+  }
+  
+  #nav-social-section,
+  #nav-contact-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+#image-track > .card {
+    width: 50vmin;
+    height: 75vmin;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+#card-container{
+    display: flex;
+    gap: 5rem;
+}
+
+  .card {
+    aspect-ratio: 1 / 1;
+    border: 0.5vmin solid var(--border-color);
+    cursor: pointer;
+    width: 56vmin;
+    position: relative;
+    z-index: 1;
+}
+
+.card:before {
+    background: linear-gradient(
+        135deg,
+        transparent 0% 33%,
+        var(--g1) 66%,
+        var(--g2) 83.5%,
+        var(--g3) 100%   
+        );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0%;
+    position: absolute;
+    top: 0px;  
+    width: 100%;
+    transition: background-position 1s ease;
+    z-index: -1;
+}
+.card:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.card:hover > :not(:hover):not(.card-title):not(.card-text) {
+    opacity: 0.5;
+}
+
+.card-title,
+.card-text {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    z-index: 1;
+    padding: 2vmin;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.card-title {
+    font-size: 5vmin;
+}
+
+.card-text {
+    font-size: 25;
+}
