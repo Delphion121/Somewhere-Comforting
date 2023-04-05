@@ -108,6 +108,23 @@ nav > .nav-section{
   
 }
 
+@media only screen and (max-width: 900px) {
+  
+body{
+  background-color: red !important;
+}
+  #image-track {
+    display: flex !important;
+    gap: 500vmin !important;
+    background-color: red !important;
+  }
+  
+  .image {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
 
 #image-track > .image {
     width: 50vmin;
