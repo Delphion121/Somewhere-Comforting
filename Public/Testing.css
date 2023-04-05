@@ -106,9 +106,8 @@ nav > .nav-section{
 
 #tutorial {
   position: absolute;
-  display: grid;
   align-items: center;
-  top: 15%;
+  top: 35%;
   left: -1.5%;
   -khtml-user-select: none;
   -o-user-select: none;
