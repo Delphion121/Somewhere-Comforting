@@ -104,6 +104,20 @@ nav > .nav-section{
     z-index: -1;
 }
 
+#tutorial {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  top: 15%;
+  left: -1.5%;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: 2s;
+}
+
 #image-track {
     display: grid;
     gap: 4vmin;
