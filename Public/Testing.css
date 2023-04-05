@@ -28,19 +28,7 @@ body > .temp-img {
   box-sizing: border-box;
 }
 
-#tutorial {
-  position: absolute;
-  display: grid;
-  align-items: center;
-  top: 15%;
-  left: -1.5%;
-  -khtml-user-select: none;
-  -o-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  transition: 2s;
-}
+
 
 .gif {
   width: 450px;
