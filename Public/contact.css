@@ -102,6 +102,10 @@ nav > .nav-section{
   border-bottom: 1px solid white;
 }
 
+#mcontact {
+  display: none;
+}
+
 @media (max-width: 1000px) {
    
   nav {
