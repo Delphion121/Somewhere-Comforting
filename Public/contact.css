@@ -1,0 +1,247 @@
+:root {
+  --border-color: rgb(255, 255, 255, 0.1);
+  --nav-background: rgb(255, 255, 255);
+  --g1: rgb(30, 114, 86);
+  --g2: rgb(30, 114, 86);
+  --g3: rgb(30, 114, 86);
+}
+body {
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+    margin: 0rem;
+    border: white;
+    overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, a, p, span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+a:hover {
+  color: red;
+  transition: 1s;
+}
+
+nav{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  text-decoration: none;
+  
+}
+
+nav > .nav-section{
+  padding:  1rem 3rem;
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--border-color);
+   
+}
+
+#nav-link-section {
+  display: flex;
+  align-items: center;
+}
+
+#nav-logo-secion, 
+#nav-link-section {
+  flex-basis: calc(100 / 3);
+}
+
+#nav-social-section,
+#nav-contact-section {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+#mobile-container{
+  display: none;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 1000;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.mobile-menu-items a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 1000px) {
+   
+  nav {
+    display: none;
+  }
+
+  #mobile-menu{
+    display: block;
+  }
+  .mobile-menu-items a {
+    font-size: 2.5rem;
+  }
+  #card-container{
+    display: none !important;
+  }
+  #mcontact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: -5%;
+  }
+  a {
+    font-size: 5rem;
+  }
+}
+
+/* #image-track > .card {
+  width: 50vmin;
+  height: 75vmin;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+} */
+
+#card-container{
+  display: flex;
+  gap: 5rem;
+  object-position: center;
+  position: absolute;
+  left: 40%;
+}
+
+.card {
+  height: 35vmin;
+  border: 0.1vmin solid var(--border-color);
+  cursor: pointer;
+  width: 56vmin;
+  z-index: 1;
+  display: grid;
+  text-align: center;
+}
+
+#contact-form{
+  color: white;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+input,
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.card:before {
+  background: linear-gradient(
+      135deg,
+      transparent 0% 33%,
+      var(--g1) 66%,
+      var(--g2) 83.5%,
+      var(--g3) 100%   
+      );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0px;  
+  width: 100%;
+  transition: background-position 1s ease;
+  z-index: -1;
+}
+.card:hover:before {
+  background-position: 100% 100%;
+  transform: scale(1.08, 1.03);
+}
+
+.card:hover > :not(:hover):not(.card-title):not(.card-text) {
+  opacity: 0.5;
+}
+
+
+.card-title,
+.card-text {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  margin: 0px;
+  z-index: 1;
+  padding: 2vmin;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.card-title {
+  font-size: 5vmin;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 25;
+}
